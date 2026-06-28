@@ -2,3 +2,10 @@
 data/
 .ipynb_checkpoints/
 __pycache__/
+
+# LaTeX build artifacts (regenerate with: pdflatex report.tex)
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
