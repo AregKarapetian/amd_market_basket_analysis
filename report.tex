@@ -446,10 +446,12 @@ top to bottom.
     \texttt{matplotlib}, \texttt{mlxtend}, and the \texttt{kaggle} CLI/package
     installed.
     \item \textbf{Data access.} The dataset is downloaded at runtime via the
-    Kaggle API. Reproducing the experiments requires a Kaggle account and a
-    local credentials file (\texttt{\textasciitilde/.kaggle/access\_token} or
-    \texttt{\textasciitilde/.kaggle/kaggle.json}); no credentials are
-    distributed with the code.
+    Kaggle API, authenticated with \texttt{os.environ['KAGGLE\_USERNAME']} /
+    \texttt{os.environ['KAGGLE\_KEY']} set inside the notebook. The
+    distributed version of the notebook contains placeholder values
+    (\texttt{"xxxxxx"}); reproducing the experiments requires a Kaggle
+    account and replacing the placeholders with a real username and API key
+    locally before running.
     \item \textbf{Determinism.} Wherever random subsampling is used, a fixed
     random seed (\texttt{RANDOM\_SEED = 42}) is set, so re-running the
     notebook reproduces identical baskets and identical results.
